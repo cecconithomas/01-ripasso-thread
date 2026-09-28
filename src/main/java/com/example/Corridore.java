@@ -7,17 +7,17 @@ class Corridore extends Thread {
         this.nome = nome;
     }
 
-    @Override
+     @Override
     public void run() {
         for (int i = 1; i <= 5; i++) {
             System.out.println(nome + " ha fatto il passo " + i);
             try {
-                long pausa = 200 + (long)(Math.random() * 600);
+                int pausa = 200 + (int)(Math.random() * 601);
                 Thread.sleep(pausa);
             } catch (InterruptedException e) {
                 return;
             }
         }
-        System.out.println(nome + " ha tagliato il traguardo");
+        System.out.println(nome + " HA TAGLIATO IL TRAGUARDO!");
     }
 }
